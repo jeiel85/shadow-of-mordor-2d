@@ -405,6 +405,32 @@ body, html {
   color: #ef4444;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.repo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-decoration: none;
+  border: 1px solid #2d203e;
+  border-radius: 6px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.repo-link:hover,
+.repo-link:focus-visible {
+  color: #00d4ff;
+  border-color: #00d4ff;
+}
+
 .nemesis-board {
   flex: 1;
   overflow-y: auto;

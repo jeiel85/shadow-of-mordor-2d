@@ -305,3 +305,12 @@ class Game {
 window.addEventListener('DOMContentLoaded', () => {
   new Game();
 });
+
+// Installable PWA: register the service worker only in production builds (never cache dev-server modules)
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch((error) => {
+      console.warn('Service worker registration failed:', error);
+    });
+  });
+}
